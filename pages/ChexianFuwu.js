@@ -11,9 +11,9 @@ export default class ChexianFuwu extends Component {
 
   render() {
     return (
-      <SafeAreaView style={[styles.container, { backgroundColor: '#ffffff' }]}>        
-          <MyStatusBar translucent="false"/> 
-          <ActionBar backgroundColor="rgb(255,255,255,0)" title="车险服务"></ActionBar>          
+      <View style={[styles.container, { backgroundColor: '#ffffff' }]}>        
+          <MyStatusBar translucent={false}  barStyle="dark-content"/> 
+          <ActionBar  title="车险服务"></ActionBar>          
           <ImageBackground style={styles.imageStyle} source={require('.././images/chexianfuwu-1.png')} >
           </ImageBackground> 
           <View style={styles.baojiaArea}>            
@@ -88,7 +88,7 @@ export default class ChexianFuwu extends Component {
             </View>
             </View>
           </View>
-      </SafeAreaView>
+      </View>
 
     );
   }

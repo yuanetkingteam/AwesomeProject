@@ -13,7 +13,7 @@ export default class ChewuGuanli extends Component {
       <View  style={styles.outterContainer}>
           <View style={styles.mainContainer} >             
                   <ImageBackground style={{height:200,width:'100%'}} source={require('.././images/chewuguanli-1.png')}>
-                    <MyStatusBar /> 
+                    <MyStatusBar barStyle="light-content" translucent={false}/> 
                     <ActionBar color="#ffffff" title="车务管理" backgroundColor="transparent" />    
       
                   </ImageBackground>

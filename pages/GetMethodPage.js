@@ -14,8 +14,8 @@ export default class GetMethodPage extends React.Component {
   render() {
     return (
       <View  style={styles.outterContainer}>
-        <View style={styles.mainContainer} >
-          <MyStatusBar />
+        <View style={styles.mainContainer} > 
+          <MyStatusBar barStyle="dark-content" translucent={true}/>
           <ActionBar title="领取方式" backgroundColor="#ffffff"/>
           <GetMethodArea ref={self => {this.getMethodObj = self}} {...this.props}/>
           <View style = {styles.addressContainer}>

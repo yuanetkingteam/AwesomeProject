@@ -9,7 +9,7 @@ class MyStatusBar extends Component {
         height: Platform.OS === 'ios' ? 20 : StatusBar.currentHeight,
         backgroundColor:'transparent',
       }}>
-    <StatusBar backgroundColor='white' barStyle="light-content" translucent={true} />
+    <StatusBar backgroundColor='white' barStyle={this.props.barStyle} translucent={this.props.translucent} />
           </View>
     );
   }
