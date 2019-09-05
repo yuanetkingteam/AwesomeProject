@@ -19,6 +19,8 @@ const App = createBottomTabNavigator({
     //First entry by default be our first screen if we do not define initialRouteName
     Second: ChewuGuanli, 
     Third: GetMethodPage, 
+    Fouth: GetMethodPage,
+    Fifth: GetMethodPage,
   }, 
   { 
     defaultNavigationOptions: ({ navigation }) => ({
