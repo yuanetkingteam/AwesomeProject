@@ -21,8 +21,8 @@ const App = createBottomTabNavigator({
     //First entry by default be our first screen if we do not define initialRouteName
     Second: ChewuGuanli, 
     Third: GetMethodPage, 
-    Fouth: VipOpened,
-    Fifth: VipBeforOpen, 
+    Fouth: VipOpened, //第四个是没开通
+    Fifth: VipBeforOpen, //第五个是开通之后
   }, 
   { 
     defaultNavigationOptions: ({ navigation }) => ({
