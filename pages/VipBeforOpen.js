@@ -1,95 +1,77 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, StatusBar, Platform,TouchableOpacity  } from 'react-native';
+import { Text, View, StyleSheet, StatusBar, Platform,TouchableOpacity,ImageBackground } from 'react-native';
 import  {MyStatusBar, ActionBar, GetMethodArea} from '.././common'
 
 export default class VipBeforeOpen extends React.Component {
-  constructor(props){ 
-    super(props);
-    this.onPressButton = this.onPressButton.bind(this); 
-  }
-  onPressButton(){
-    console.log(this.getMethodObj.state.selectedIndex); 
-    alert('选择领取方式:'+this.getMethodObj.state.selectedIndex);
-  }
+ 
   render() {
     return (
-      <View  style={styles.outterContainer}>
-        <View style={styles.mainContainer} > 
-          <MyStatusBar barStyle="dark-content" translucent={false}/>
-          <ActionBar title="领取方式" backgroundColor="#ffffff"/>
-          <GetMethodArea ref={self => {this.getMethodObj = self}} {...this.props}/>
-          <View style = {styles.addressContainer}>
-              <View style={styles.item1}><Text></Text></View>
-              <View style={styles.item8}>
-                <Text style={styles.biggerTxt}>吉林市丰满区吉林大街52-2号</Text>
-                <Text>迅捷养车{'   '}0432-4578372</Text>
-              </View>
-              <View style={styles.item1}><Text>{'>'}</Text></View>
-          </View>
-          <View style = {styles.hintArea}>
-            <Text style = {styles.hintTxt}>保单生成需2小时，邮费由个人承担</Text>
-          </View>
-        </View>
-        <View style = {styles.buttonArea}>
-          <TouchableOpacity style = {styles.button} onPress={this.onPressButton}   color="#339999" ><Text style = {{color:'#ffffff'}}>确定</Text></TouchableOpacity>
-        </View>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  outterContainer: {
-    justifyContent: 'space-between',
-    flex: 1,
-    backgroundColor:'#efefef'
-  },
-  mainContainer: {
-    justifyContent: 'flex-start',
-    flex: 1,
-  },
-  buttonArea:{
-    height:80,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  button:{
-    height:50,
-    width:'80%',
-    backgroundColor:'#008080',
-    borderRadius:30,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  addressContainer:{
-    height: 85,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    backgroundColor:'#ffffff',
-  },
-  item1: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    width:30,
-  },
-  item8: {
-    justifyContent: 'center',
-    margin:0,
-    flex: 1
-  },
-  biggerTxt:{
-    fontSize:16,
-    lineHeight:35,
-  },
-  hintArea:{
-    paddingLeft:30,
-    height:40,
-    justifyContent: 'center',
-  },
-  hintTxt:{
-    color:'#999999',
-  }
-});
+              <View  style={styles.outContainer}>
+                    <MyStatusBar barStyle="dark-content" translucent={false}/>
+        
+                    <View style={styles.topContainer}>
+                        <ImageBackground style={{height:40,width:40}} source={require('.././images/vip-1-1.png')}> 
+                        </ImageBackground>
+                    </View>
+                    <View style={styles.titleContainer}>
+                        <View style={styles.titleTop}>
+                            <Text>会员特价</Text>
+                            <Text>查看权益{' '}></Text>
+                        </View>
+                        <View style={styles.titeCicle}>
+                            <View><ImageBackground style={{height:40,width:40}} source={require('.././images/vip-1-2.png')}> 
+                            </ImageBackground>
+                            <Text>险后咨询</Text></View>
+                            <View><ImageBackground style={{height:40,width:40}} source={require('.././images/vip-1-3.png')}> 
+                            </ImageBackground>
+                            <Text>保养7折</Text></View>
+                            <View><ImageBackground style={{height:40,width:40}} source={require('.././images/vip-1-4.png')}> 
+                            </ImageBackground>
+                            <Text>免费玻璃水</Text></View>
+                            <View><ImageBackground style={{height:40,width:40}} source={require('.././images/vip-1-5.png')}> 
+                            </ImageBackground>
+                            <Text>会员开放日</Text></View>
+                            <View><ImageBackground style={{height:40,width:40}} source={require('.././images/vip-1-6.png')}> 
+                            </ImageBackground>
+                            <Text>免费评估</Text></View>
+        
+                        </View>
+                   </View>
+                    
+                    <View style = {styles.buttonArea}>
+                        <TouchableOpacity style = {styles.button} onPress={this.onPressButton}   color="#339999" ><Text style = {{color:'#ffffff'}}>立即开通</Text>
+                        </TouchableOpacity>
+                    </View>
+            </View>
+            );
+          }
+        }
+        
+        const styles = StyleSheet.create({
+            outContainer: {
+            justifyContent: 'space-between',
+            
+          },
+          topContainer: {
+            flexDirection:'row',
+            justifyContent: 'space-between',
+          },
+          titleContainer:{
+            flexDirection:'row',
+          },
+            titleTop:{
+            fontSize: 12,
+          },
+          titeCicle:{
+            flexDirection:'row',
+          },
 
 
-
+          buttonArea:{
+           
+          },
+          button:{
+           height:12,
+          },
+       
+        });
