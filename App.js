@@ -9,7 +9,7 @@ import {createStackNavigator,createAppContainer,createBottomTabNavigator} from '
 import ChexianFuwu from './pages/ChexianFuwu';
 import ChewuGuanli from './pages/ChewuGuanli';
 import GetMethodPage from './pages/GetMethodPage';
-
+ 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 //import all the screens we are going to switch 
