@@ -19,7 +19,7 @@ const App = createBottomTabNavigator({
     //First entry by default be our first screen if we do not define initialRouteName
     Second: ChewuGuanli, 
     Third: GetMethodPage, 
-  },
+  }, 
   { 
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ focused, horizontal, tintColor }) => {
