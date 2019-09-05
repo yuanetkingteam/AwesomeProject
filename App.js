@@ -9,7 +9,9 @@ import {createStackNavigator,createAppContainer,createBottomTabNavigator} from '
 import ChexianFuwu from './pages/ChexianFuwu';
 import ChewuGuanli from './pages/ChewuGuanli';
 import GetMethodPage from './pages/GetMethodPage';
- 
+import VipOpened from './pages/VipOpened';
+import VipBeforOpen from './pages/VipBeforOpen';
+
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 //import all the screens we are going to switch 
@@ -19,8 +21,8 @@ const App = createBottomTabNavigator({
     //First entry by default be our first screen if we do not define initialRouteName
     Second: ChewuGuanli, 
     Third: GetMethodPage, 
-    Fouth: GetMethodPage,
-    Fifth: GetMethodPage,
+    Fouth: VipOpened,
+    Fifth: VipBeforOpen, 
   }, 
   { 
     defaultNavigationOptions: ({ navigation }) => ({
